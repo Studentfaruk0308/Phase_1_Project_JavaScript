@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Mariner's Quiz</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="Phase_1_Project.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="Phase_1_Project.js"></script>
+</head>
+<body>
+<div class="container">
+  <div class="col-sm-4"><img src="Phase_1_Project_Images/BAMA_Logo.png" class="rounded-circle" alt="BAMA-LOGO" width="120" height="120"></div>
+  <div class="col-sm-4"></div>
+  <div class="col-sm-4"><img src="Phase_1_Project_Images/BD_Aus_Flag.jpg" class="rounded-circle" alt="BAMA-LOGO" width="120" height="120"></div>
+</div>
+  
+    
+
+<div class="header">
+        <h1 class="text-center">Bangladeshi Australian Mariner's Association (BAMA) Reunion 2022</h1>
+        <h2 class="text-center">Welcome everyone to Mariner's Reunion 2022 Quiz</h2>
+    </div>
+
+
+    
+<div id="question-answer">
+  <div class="userData">
+    <p1 class="text-center">Please complete the below form and CLICK 'Start Quiz'</p1>
+
+    <div class="form-row align-items-center">
+    <div class="col-sm-12 col-lg-6">
+    <label class="sr-only">Name</label>
+    <input type="text" class="form-control" id="fullName" placeholder="Full Name">
+    </div>
+
+    <div class="col-sm-12 col-lg-6">
+    <label class="sr-only">MobileNumber</label>
+    <input type="text" class="form-control" id="mobileNumber" placeholder="Mobile Number">
+    </div>
+  </div>
+
+</div>
+  <button id="start" class="btn btn-primary btn-block" onclick="startQuiz();">Click here to Start the Quiz</button> 
+  <div class="question-row">
+    <div class="col-sm-3">Serial</div>
+    <div class="col-sm-9">Question</div>
+  </div>
+  <div class="answer-row">
+    <div class="col-sm-12 col-lg-3">answerA</div>
+    <div class="col-sm-12 col-lg-3">answerB</div>
+    <div class="col-sm-12 col-lg-3">answerC</div>
+    <div class="col-sm-12 col-lg-3">answerD</div>
+  </div>
+</div>
+
+<button class="col-sm-12" onclick="tryAgain()">CLICK HERE TO TRY AGAIN</button>
+
+<button class="col-sm-12" onclick="allUsers()">LIST OF ALL USERS INCLUDING THEIR SCORE</button>
+
+<div id="userContainer" class="col-sm-12">
+
+</div>
+
+<footer>
+    <button id="like" class="col-sm-3" onclick="like();">Like! &#x2661;</button>
+
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,267 @@
+/*const myQuestions = 
+[
+    {
+        "category": "Geography",
+        "id": "62373588cfe13103f55eb53f",
+        "correctAnswer": "Montenegro",
+        "incorrectAnswers": [
+            "Yemen",
+            "Mexico",
+            "Monaco"
+        ],
+        "question": "Which region of the world uses '.me' at the end of its web addresses?",
+        "tags": [],
+        "type": "Multiple Choice",
+        "difficulty": "hard"
+    },
+    {
+        "category": "Sport & Leisure",
+        "id": "62399eccaf96521963a08708",
+        "correctAnswer": "Germany",
+        "incorrectAnswers": [
+            "Spain",
+            "Italy",
+            "Argentina"
+        ],
+        "question": "Which country won the 2014 FIFA World Cup, hosted in Brazil?",
+        "tags": [
+            "football",
+            "soccer",
+            "world_cup"
+        ],
+        "type": "Multiple Choice",
+        "difficulty": "medium"
+    },
+    {
+        "category": "Music",
+        "id": "622a1c357cc59eab6f94fd6c",
+        "correctAnswer": "Fatboy Slim",
+        "incorrectAnswers": [
+            "Basement Jaxx",
+            "Chemical Brothers",
+            "Daft Punk"
+        ],
+        "question": "Whose Albums Include \"Better Living By Chemistry\" & \"You've Come A Long Way Baby\"?",
+        "tags": [
+            "music_albums"
+        ],
+        "type": "Multiple Choice",
+        "difficulty": "medium"
+    },
+    {
+        "category": "Music",
+        "id": "625064d0e12f6dec240bdfcf",
+        "correctAnswer": "Eddy Grant",
+        "incorrectAnswers": [
+            "Devo",
+            "Suzi Quatro",
+            "Nick Gilder"
+        ],
+        "question": "'Electric Avenue' was a one hit wonder in 1983 by which artist?",
+        "tags": [
+            "songs",
+            "one_hit_wonders"
+        ],
+        "type": "Multiple Choice",
+        "difficulty": "hard"
+    },
+    {
+        "category": "Music",
+        "id": "622a1c357cc59eab6f94fd88",
+        "correctAnswer": "Jenny",
+        "incorrectAnswers": [
+            "Brenda",
+            "Lisa",
+            "Julie"
+        ],
+        "question": "Who Is Tommy Tutone Trying To Call When He Dials \"867 5309\"",
+        "tags": [
+            "songs",
+            "lyrics"
+        ],
+        "type": "Multiple Choice",
+        "difficulty": "medium"
+    },
+    {
+        "category": "Society & Culture",
+        "id": "622a1c357cc59eab6f94fcea",
+        "correctAnswer": "Indo-European",
+        "incorrectAnswers": [
+            "Niger–Congo",
+            "Dravidian",
+            "Kra–Dai"
+        ],
+        "question": "The language 'Russian' belongs to which language family?",
+        "tags": [
+            "language"
+        ],
+        "type": "Multiple Choice",
+        "difficulty": "medium"
+    },
+    {
+        "category": "Music",
+        "id": "622a1c387cc59eab6f950baa",
+        "correctAnswer": "Nine Inch Nails",
+        "incorrectAnswers": [
+            "In This Moment",
+            "Nitty Gritty Dirt Band",
+            "Animal Collective"
+        ],
+        "question": "Which American industrial rock band released the studio album 'The Downward Spiral'?",
+        "tags": [],
+        "type": "Multiple Choice",
+        "difficulty": "hard"
+    },
+    {
+        "category": "Sport & Leisure",
+        "id": "622a1c367cc59eab6f9500d8",
+        "correctAnswer": "Leeds United",
+        "incorrectAnswers": [
+            "Chelsea",
+            "Newcastle United",
+            "Everton"
+        ],
+        "question": "A Statue Of Billy Bremner Stands Outside The Ground Of Which Football Ground?",
+        "tags": [],
+        "type": "Multiple Choice",
+        "difficulty": "hard"
+    },
+    {
+        "category": "Film & TV",
+        "id": "624dba44de6018633d31f6bc",
+        "correctAnswer": "Carly Simon",
+        "incorrectAnswers": [
+            "Lulu",
+            "Nancy Sinatra",
+            "Matt Monro"
+        ],
+        "question": "Who performed the theme song to the James Bond film The Spy Who Loved Me?",
+        "tags": [
+            "james_bond",
+            "film",
+            "soundtracks"
+        ],
+        "type": "Multiple Choice",
+        "difficulty": "hard"
+    },
+    {
+        "category": "Society & Culture",
+        "id": "622a1c3d7cc59eab6f951c6e",
+        "correctAnswer": "The Shepherds",
+        "incorrectAnswers": [
+            "Three Wise Men",
+            "King Herod",
+            "The Stable Boy"
+        ],
+        "question": "According to the bible, who were the baby Jesus's first visitors?",
+        "tags": [],
+        "type": "Multiple Choice",
+        "difficulty": "hard"
+    }
+]
+*/
+
+
+
+fetch("string representing a URL to a data source")
+.then(function(response) {
+  return response.json();
+})
+.then(function(json){
+  // Use this data inside of `json` to do DOM manipulation
+})
+
+fetch("string representing a URL to a data source")
+  /*
+    The function above returns an object that represents what the data source
+    sent back. It does *not* return the actual content.
+
+    We have to call the then() method on the object that comes back. then()
+    takes as its argument a function that receives the response as its argument.
+    Inside of the function, we do whatever processing we need, but at the end we
+    *have to return* the content that we've gotten out of the response.
+
+    The response has some basic functions on it for the most common data types.
+    The most important ones are .json() and .text().
+
+    This callback function is usually only one line: returning the content from
+    the response. What we return from this function will be used in the _next_
+    then() function.
+  */
+
+  .then(function(response) {
+    return response.json();
+  })
+
+  /*
+    The function above returns the content from the response.
+    We can use that content inside of the callback function that's
+    passed in to the then() function below.
+  */
+
+  .then(function(json){
+    // Use this data inside of `json` to do DOM manipulation
+  })
+
+  fetch('http://api.open-notify.org/astros.json')
+.then(function(response) {
+  return response.json();
+})
+.then(function(json) {
+  console.log(json)
+});
+
+
+fetch('db.json').then(function (response){
+  return response.json();
+}).then(function (obj){
+  console.log(obj);
+}).catch(function(error){
+  console.error('Something Went Wrong!');
+  sonsole.error(error);
+});
+
+
+//getting the data from API
+
+
+async function getQuestion(){
+  const response = await fetch(api_url);
+  const data = await response.json();
+  console.log(data);
+};
+
+Json Server Video:
+https://www.youtube.com/watch?v=NM4gB8J1uF4
+
+
+
+
+
+
+
+<form class="form-inline" action="/action_page.php">
+  <label for="FullName">Full Name:</label>
+  <input type="FullName" id="FullName" placeholder="Enter Full Name" name="FullName">
+  <label for="Mobile">Mobile:</label>
+  <input type="MobileNumber" id="MobileNumber" placeholder="Enter Mobile Number" name="MobileNumber">
+  <label for="totalScore">Total Score:</label>
+  <input type="totalScore" id="totalScore" placeholder="Total Score" name="totalScore">
+  <button id="dataSubmit">Submit</button>
+</form>
+
+.form-inline label {
+	margin: 5px 10px 5px 5px;
+	font-size: large;
+	color: red;
+  }
+  
+  .form-inline input {
+	vertical-align: middle;
+	margin: 5px 10px 5px 6px;
+	padding: 20px;
+	background-color: #fff;
+	border: 1px solid #ddd;
+	font-size: large;
+	color: red
+  }

@@ -1,0 +1,23 @@
+{
+  "name": "phase_1_project",
+  "version": "1.0.0",
+  "description": "Phase_1_Project",
+  "main": "Phase_1_Project.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"json-server --watch db.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Studentfaruk0308/Phase_1_Project.git"
+  },
+  "author": "Md Faruk Ahmed",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Studentfaruk0308/Phase_1_Project/issues"
+  },
+  "homepage": "https://github.com/Studentfaruk0308/Phase_1_Project#readme",
+  "dependencies": {
+    "json-server": "^0.17.0"
+  }
+}
